@@ -1,5 +1,8 @@
+<header class="page-header">
+  <h1>Admin &raquo; Dashboard</h1>
+</header>
+
 <section class ="admin-dash alert alert-success" role="alert">
-  <h1 class="dash-header">Admin Dashboard</h1>
 
   <h2>There are currently <strong><%= @categories.count %></strong> categories in the database:</h2>
   <% @categories.each.with_index do |category| %>
@@ -8,4 +11,55 @@
 
   <h2>There are currently <strong><%= @products.count %></strong> products in the database:</h2>
   <%= render 'link', item: 'Products', url: "admin/products" %>
+</section>
+
+<section class="admin-dashboard-show">
+
+  <h3>Admin &raquo; Categories</h3>
+
+  <div class="well">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+
+  <div class="panel panel-default categories">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Categories</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @categories %>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h3>Admin &raquo; Products</h3>
+
+  <div class="well">
+    <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
+  </div>
+
+  <div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Qty Remaining</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @products %>
+      </tbody>
+    </table>
+
+  </div>
+
 </section>

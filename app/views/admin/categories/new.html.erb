@@ -5,7 +5,21 @@
   </header>
 
   <div class="well">
-    <%= link_to 'All Categories', [:admin, :categories], class: 'btn btn-info' %>
+    <div class="panel panel-default categories">
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Existing Categories</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @categories %>
+        </tbody>
+      </table>
+
+    </div>
   </div>
 
   <div class="row">

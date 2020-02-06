@@ -6,7 +6,8 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def new 
-    @category = Category.find_by_name(params[:name].titlecase)
+    @categories = Category.all
+    @category = Category.new
   end
 
   def create
@@ -20,7 +21,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find params[:id]
+    @category = Category.find_by_name(params[:name])
     @category.destroy
     redirect_to [:admin, :categories], notice: 'Category deleted!'
   end
