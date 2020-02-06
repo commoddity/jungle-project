@@ -2,8 +2,8 @@
   <h1 class="dash-header">Admin Dashboard</h1>
 
   <h2>There are currently <strong><%= @categories.count %></strong> categories in the database:</h2>
-  <% @categories.each.with_index do |category, index| %>
-    <%= render 'link', item: category.name, url: "categories/#{index + 1}" %>
+  <% @categories.each.with_index do |category| %>
+    <%= render 'link', item: category.name, url: category_path(category) %>
   <% end %>
 
   <h2>There are currently <strong><%= @products.count %></strong> products in the database:</h2>
