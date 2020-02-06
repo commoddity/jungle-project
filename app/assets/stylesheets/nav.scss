@@ -1,0 +1,15 @@
+.navbar-brand {
+	font-size: 24px;
+}
+
+li {
+	font-size: 20px;
+}
+
+.logged-in > a,
+.logged-out > a {
+	display: inline-block;
+	font-size: 20px;
+	color: rgb(13, 52, 124);
+	list-style-type: none;
+}
