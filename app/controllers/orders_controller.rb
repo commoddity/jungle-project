@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.includes(:line_items).find(params[:id])
   end
 
   def create
@@ -48,8 +48,8 @@ class OrdersController < ApplicationController
       order.line_items.new(
         product: product,
         quantity: quantity,
-        item_price: humanized_money_with_symbol product.price,
-        total_price: humanized_money_with_symbol product.price * quantity
+        item_price: product.price,
+        total_price: product.price * quantity
       )
     end
     order.save!
