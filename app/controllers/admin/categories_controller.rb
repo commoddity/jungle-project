@@ -6,7 +6,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def new 
-    @category = Category.find_by_name(params[:name])
+    @category = Category.find_by_name(params[:name].titlecase)
   end
 
   def create
