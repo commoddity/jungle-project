@@ -6,6 +6,7 @@
 
   <div class="order-summary jumbotron">
     <p>Thank you for your order!</p>
+    
     <%= render "line_item", order: @order %>
 
     <p>Your order total is $<%= @order.total_cents / 100 %>.00</p>

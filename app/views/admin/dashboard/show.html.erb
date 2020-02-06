@@ -1,2 +1,20 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<section class ="admin-dash">
+  <h1>Admin Dashboard</h1>
+  
+  <h2>There are currently <%= @categories.count %> categories in the database.</h2>
+  <%= link_to 'categories/1' do %>
+    <%= content_tag :h2, "View Apparel", :class => "home-link" %>
+  <% end %>
+  <%= link_to 'categories/2' do %>
+    <%= content_tag :h2, "View Electronics", :class => "home-link" %>
+  <% end %>
+  <%= link_to 'categories/3' do %>
+    <%= content_tag :h2, "View Products", :class => "home-link" %>
+  <% end %>
+  
+  <h2>There are currently <%= @products.count %> products in the database.</h2>
+  <%= link_to '/admin/products' do %>
+    <%= content_tag :h2, "View Products", :class => "home-link" %>
+  <% end %>
+</section>
+
