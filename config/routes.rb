@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/about' => 'about#about'
 
   resources :categories, param: :name, only: [:show]
-  resources :products, only: [:index, :show] 
+  resources :products, only: [:index, :show]
 
   resource :cart, only: [:show] do
     post   :add_item
