@@ -2,7 +2,7 @@
   <td>
     <h4><%= category.name %></h4>
   </td>
-  <td>
-    <%= link_to fa_icon('trash'), [:admin, category], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+  <td id='delete-column' class="vert-align">
+    <%= link_to fa_icon('trash'), [:admin, category], class: 'btn btn-sm btn-danger my-0', method: :delete, data: { confirm: "Are you sure?" } %>
   </td>
 </tr>
