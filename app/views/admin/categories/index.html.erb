@@ -6,6 +6,8 @@
 
   <div class="well">
     <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+    <%= render '/admin/dashboard/dropdown' %>
+    <%= link_to 'Back to Dashboard', '/admin', class: 'btn btn-danger back-to-dash' %>
   </div>
 
   <div class="panel panel-default categories">
@@ -14,7 +16,6 @@
       <thead>
         <tr>
           <th>Category</th>
-          <th>View</th>
           <th>Delete</th>
         </tr>
       </thead>

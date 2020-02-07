@@ -5,9 +5,10 @@
 <section class ="admin-dash alert alert-success" role="alert">
 
   <h2>There <% if @categories.count > 1 %>are<% else %>is<% end %> currently <strong><%= @categories.count %></strong> categorie<% if @categories.count > 1 %>s<% end %> in the database:</h2>
-  <% @categories.each do |category| %>
-    <%= render 'link', item: category.name, url: category_path(category) %>
-  <% end %>
+  <span class="categories-menu">
+    <%= render 'link', item: 'Categories', url: "admin/categories" %>
+    <%= render 'dropdown' %>
+  </span>
 
   <h2>There <% if @products.count > 1 %>are<% else %>is<% end %> currently <strong><%= @products.count %></strong> product<% if @products.count > 1 %>s<% end %> in the database:</h2>
   <%= render 'link', item: 'Products', url: "admin/products" %>
@@ -23,6 +24,8 @@
 
   <div class="well">
     <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+    <%= link_to 'View Categories', 'admin/categories', class: 'btn btn-primary' %>
+    <%= render 'dropdown' %>
   </div>
 
   <div class="panel panel-default categories">
@@ -31,7 +34,6 @@
       <thead>
         <tr>
           <th>Categories</th>
-          <th>View</th>
           <th>Delete</th>
         </tr>
       </thead>

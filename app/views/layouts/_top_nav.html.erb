@@ -25,7 +25,7 @@
             Categories
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu animate slideIn">
             <% Category.all.each do |category| %>
               <li><%= link_to category.name, category %></li>
             <% end %>
@@ -48,7 +48,7 @@
             <span class="text-danger"><%= fa_icon 'lock', text: 'Admin' %></span>
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu animate slideIn">
             <li><%= link_to 'Dashboard', [:admin, :root] %></li>
             <li><%= link_to 'Categories',  [:admin, :categories] %></li>
             <li><%= link_to 'Products',  [:admin, :products] %></li>
