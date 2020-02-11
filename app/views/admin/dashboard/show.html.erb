@@ -6,17 +6,19 @@
 
   <h2>There <%= pluralize_without_count(@categories.count, "is") %> currently <%= pluralize(@categories.count, "category") %> in the database:</h2>
   <span class="categories-menu">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
     <%= render 'link', item: 'Categories', url: "admin/categories" %>
     <%= render partial: 'dropdown', locals: { items: @categories } %>
   </span>
 
   <h2>There <%= pluralize_without_count(@products.count, "is") %> currently <%= pluralize(@products.count, "product") %> in the database:</h2>
+  <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
   <%= render 'link', item: 'Products', url: "admin/products" %>
   <%= render partial: 'dropdown', locals: { items: @products } %>
 
   <h2>There <%= pluralize_without_count(@sales.count, "is") %> currently <%= pluralize(@sales.count, "sale") %> in the database:</h2>
+  <%= link_to '+ New Sale', [:new, :admin, :sale], class: 'btn btn-info' %>
   <%= render 'link', item: 'Sales', url: "admin/sales" %>
-  <%= render partial: 'dropdown', locals: { items: @sales } %>
 
 </section>
 
@@ -78,7 +80,6 @@
   <div class="well">
     <%= link_to '+ New Sale', [:new, :admin, :sale], class: 'btn btn-info' %>
     <%= link_to 'View Sales', 'admin/sales', class: 'btn btn-primary' %>
-    <%= render partial: 'dropdown', locals: { items: @sales } %>
   </div>
 
   <div class="panel panel-default sales">

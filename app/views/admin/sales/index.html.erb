@@ -6,7 +6,6 @@
 
   <div class="well">
     <%= link_to '+ New Sale', [:new, :admin, :sale], class: 'btn btn-info' %>
-    <%= render partial: '/admin/dashboard/dropdown', locals: { items: @sales } %>
     <%= link_to 'Back to Dashboard', '/admin', class: 'btn btn-danger back-to-dash' %>
   </div>
 
