@@ -48,7 +48,7 @@ RSpec.describe User, type: :model do
     it "is not valid if email is not unique" do
       subject.save
 
-      user2 = User.new( email: "mike@dogs.com", 
+      user2 = User.new( email: "MIKE@dogs.com", 
         first_name: "Bob ", 
         last_name: "Cats", 
         password: "catsrule", 
@@ -57,5 +57,15 @@ RSpec.describe User, type: :model do
       expect(user2).to_not be_valid
     end
 
+    it "is not valid is password is at least 8 characters" do
+      subject.password = "1234"
+      expect(subject).to_not be_valid
+    end
+
   end
+
+  describe '.authenticate_with_credentials' do
+    # examples for this class method here
+  end
+  
 end

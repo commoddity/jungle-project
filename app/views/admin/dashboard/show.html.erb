@@ -4,17 +4,19 @@
 
 <section class ="admin-dash alert alert-success" role="alert">
 
-  <h2>There <% if @categories.count > 1 %>are<% else %>is<% end %> currently <strong><%= @categories.count %></strong> categorie<% if @categories.count > 1 %>s<% end %> in the database:</h2>
+  <h2>There <%= pluralize_without_count(@categories.count, "is") %> currently <%= pluralize(@categories.count, "category") %> in the database:</h2>
   <span class="categories-menu">
     <%= render 'link', item: 'Categories', url: "admin/categories" %>
-    <%= render 'dropdown' %>
+    <%= render partial: 'dropdown', locals: { items: @categories } %>
   </span>
 
-  <h2>There <% if @products.count > 1 %>are<% else %>is<% end %> currently <strong><%= @products.count %></strong> product<% if @products.count > 1 %>s<% end %> in the database:</h2>
+  <h2>There <%= pluralize_without_count(@products.count, "is") %> currently <%= pluralize(@products.count, "product") %> in the database:</h2>
   <%= render 'link', item: 'Products', url: "admin/products" %>
+  <%= render partial: 'dropdown', locals: { items: @products } %>
 
-  <h2>There <% if @sales.count > 1 %>are<% else %>is<% end %> currently <strong><%= @sales.count %></strong> sale<% if @sales.count > 1 %>s<% end %> in the database:</h2>
+  <h2>There <%= pluralize_without_count(@sales.count, "is") %> currently <%= pluralize(@sales.count, "sale") %> in the database:</h2>
   <%= render 'link', item: 'Sales', url: "admin/sales" %>
+  <%= render partial: 'dropdown', locals: { items: @sales } %>
 
 </section>
 
@@ -25,7 +27,7 @@
   <div class="well">
     <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
     <%= link_to 'View Categories', 'admin/categories', class: 'btn btn-primary' %>
-    <%= render 'dropdown' %>
+    <%= render partial: 'dropdown', locals: { items: @categories } %>
   </div>
 
   <div class="panel panel-default categories">
@@ -49,6 +51,7 @@
   <div class="well">
     <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
     <%= link_to 'View Products', 'admin/products', class: 'btn btn-primary' %>
+    <%= render partial: 'dropdown', locals: { items: @products } %>
   </div>
 
   <div class="panel panel-default products">
@@ -75,6 +78,7 @@
   <div class="well">
     <%= link_to '+ New Sale', [:new, :admin, :sale], class: 'btn btn-info' %>
     <%= link_to 'View Sales', 'admin/sales', class: 'btn btn-primary' %>
+    <%= render partial: 'dropdown', locals: { items: @sales } %>
   </div>
 
   <div class="panel panel-default sales">
