@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'Validations' do
     subject {
-      User.new( email: "mike@dogs.com", 
+      User.new( email: "mike3@dogs.com", 
                 first_name: "Mike", 
                 last_name: "Dogs", 
                 password: "dogsrule", 
@@ -46,7 +46,7 @@ RSpec.describe User, type: :model do
     end
 
     it "is not valid if email is not unique" do
-      subject.save
+      subject.valid?
 
       user2 = User.new( email: "MIKE@dogs.com", 
         first_name: "Bob ", 
@@ -65,7 +65,16 @@ RSpec.describe User, type: :model do
   end
 
   describe '.authenticate_with_credentials' do
-    # examples for this class method here
+    user3 = User.new( email: "mike3@dogs.com", 
+                first_name: "Mike", 
+                last_name: "Dogs", 
+                password: "dogsrule", 
+                password_confirmation: "dogsrule")
+
+    it "is valid with valid attributes" do
+      expect(user3).to be_valid
+    end
+
   end
   
 end

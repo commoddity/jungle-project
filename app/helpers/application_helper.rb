@@ -1,7 +1,7 @@
 module ApplicationHelper
 
-  def pluralize_without_count(count, noun)
-    count == 1 ? noun : noun.pluralize
+  def pluralize_without_count(count, word)
+    count == 1 ? word : word.pluralize
   end
 
 end
