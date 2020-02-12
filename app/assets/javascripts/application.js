@@ -15,3 +15,16 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+import {
+	enable as enableDarkMode,
+	disable as disableDarkMode
+} from 'darkreader';
+
+enableDarkMode({
+	brightness: 100,
+	contrast: 90,
+	sepia: 10
+});
+
+disableDarkMode();

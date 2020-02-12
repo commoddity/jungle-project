@@ -6,6 +6,26 @@ li {
 	font-size: 20px;
 }
 
+#junglist {
+	width: 140px;
+	position: relative;
+	top: -12px;
+	filter: brightness(0) saturate(100%);
+}
+
+// @media (prefers-color-scheme: light) {
+// 	#junglist {
+// 		filter: brightness(0) saturate(100%);
+// 	}
+// }
+
+// @media (prefers-color-scheme: dark) {
+// 	#junglist {
+// 		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7487%)
+// 			hue-rotate(49deg) brightness(117%) contrast(94%);
+// 	}
+// }
+
 .logged-in > a,
 .logged-out > a {
 	display: inline-block;

@@ -9,8 +9,10 @@
     
     <%= render "line_item", order: @order %>
 
-    <p>Your order total is $<%= @order.total_cents / 100 %>.00</p>
-    <p>Order placed using email: <%= @order.email %></p>
+    <h3>Your order total is $<%= @order.total_cents / 100 %>.00</h3>
+    <% if @order.email %>
+      <h3>Order placed using email: <%= @order.email %></h3>
+    <% end %>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>

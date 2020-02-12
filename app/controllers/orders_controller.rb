@@ -36,7 +36,7 @@ class OrdersController < ApplicationController
   end
 
   def create_order(stripe_charge)
-    email = User.find_by_id(session[:user_id]).email
+    email = session[:user_id].present? ? User.find_by_id(session[:user_id]).email : nil
 
     order = Order.new(
       email: email,
