@@ -36,8 +36,10 @@ class OrdersController < ApplicationController
   end
 
   def create_order(stripe_charge)
+    email = User.find_by_id(session[:user_id]).email
+
     order = Order.new(
-      email: params[:stripeEmail],
+      email: email,
       total_cents: cart_subtotal_cents,
       stripe_charge_id: stripe_charge.id, # returned by stripe
     )
