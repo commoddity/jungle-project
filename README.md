@@ -1,7 +1,43 @@
-# Jungle
+# Junglist
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+Added features:
+
+- Admin namespaced dashboard allowing for creation and destruction of products, categories and sales from within the application
+  -Secure authenticated login for users
+- Emailed order receipts when user logged in
+- Rspec automated testing
+-
+
+# Stack:
+
+- [Ruby on Rails](https://rubyonrails.org/)
+
+## Testing
+
+- [rspec](https://rspec.info/)
+- [Capybara](https://github.com/teamcapybara/capybara)
+
+# Screenshots
+
+### Main Page
+
+![Main Page](url)
+
+### Main Page
+
+(w/ [Dark Reader](url))
+
+![Main Page](url)
+
+### Order Placed Page
+
+![Order Placed](url)
+
+_### Emailed Receipt (Stretch)_
+
+![Emailed Receipt Placed](url)
 
 ## Setup
 
@@ -22,6 +58,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
 
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe
+- Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+- PostgreSQL 9.x
+- Stripe

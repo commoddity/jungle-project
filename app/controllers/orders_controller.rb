@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
 
     if @order.valid?
       empty_cart!
-      UserMailer.order_placed_email(@order, @user).deliver_now
+      UserMailer.order_placed_email(@order, @user).deliver_now unless current_user.nil?
       redirect_to @order
     else
       redirect_to cart_path, flash: { error: @order.errors.full_messages.first }
