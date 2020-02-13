@@ -9,6 +9,11 @@
     <div class="row">
 
       <div class="col-sm-4">
+      <% if !@product.quantity? %>
+        <aside class="sold-out">
+          <p>SOLD OUT</p>
+        </aside>
+      <% end %>
         <%= image_tag @product.image.url, class: 'main-img' %>
       </div>
 
