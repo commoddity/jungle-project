@@ -9,9 +9,9 @@
     
     <%= render "line_item", order: @order %>
 
-    <h3>Your order total is $<%= @order.total_cents / 100 %>.00</h3>
-    <% if @order.email %>
-      <h3>Order placed using email: <%= @order.email %></h3>
+    <h3>Order total: $<%= @order.total_cents / 100 %>.00</h3>
+    <% if current_user %>
+      <h3>An order receipt was emailed to: <%= current_user.email %></h3>
     <% end %>
   </div>
 

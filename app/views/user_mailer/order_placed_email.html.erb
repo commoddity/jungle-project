@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for your order, <%= @user.first_name %>.</h1>
+    <p>
+      You have successfully placed your order with email: <%= @order.email %>.<br>
+    </p>
+
+    <div class="order-summary jumbotron">
+    <h2>Order Receipt for Order #<%= @order.id %></h2>
+    
+    <%= render "line_item", order: @order %>
+
+    <h3>Your order total is $<%= @order.total_cents / 100 %>.00</h3>
+  </div>
+    <h1>Remember: the jungle is massive!</h1>
+  </body>
+</html>
