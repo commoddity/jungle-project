@@ -8,7 +8,7 @@ Added features:
   -Secure authenticated login for users
 - Emailed order receipts when user logged in
 - Rspec automated testing
--
+- Altered database seeds to be [absolutely massive](https://www.youtube.com/watch?v=AlZpSd2lRJQ).
 
 # Stack:
 
@@ -23,21 +23,21 @@ Added features:
 
 ### Main Page
 
-![Main Page](url)
+![Main Page](https://github.com/Commoddity/jungle-project/blob/master/docs/junglist1.png)
 
 ### Main Page
 
-(w/ [Dark Reader](url))
+(w/ [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en))
 
-![Main Page](url)
+![Main Page](https://github.com/Commoddity/jungle-project/blob/master/docs/junglist2.png)
 
 ### Order Placed Page
 
-![Order Placed](url)
+![Order Placed](https://github.com/Commoddity/jungle-project/blob/master/docs/junglist3.png)
 
 _### Emailed Receipt (Stretch)_
 
-![Emailed Receipt Placed](url)
+![Emailed Receipt Placed](https://github.com/Commoddity/jungle-project/blob/master/docs/junglist4.png)
 
 ## Setup
 
