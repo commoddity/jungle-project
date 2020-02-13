@@ -11,12 +11,11 @@ class UsersController < ApplicationController
     
     @user.save
 
-    if @user.save!
-      flash[:notice] = "Account created successfully!"
+    if @user.save
       session[:user_id] = @user.id
       redirect_to '/'
     else
-      flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
+      flash[:alert] = "Email already taken!"
       redirect_to '/signup'
     end
   end 

@@ -48,7 +48,7 @@ cat1.products.create!({
   description: 'Junglist developed into a slang term for outlaw toughs who have ostensibly survived- or operate according to the "law of the jungle". Certain tracks made references to the "original rudebwoys" or "original gangstas" as denoting particularly respected junglists. Most members of this sub-culture took great pride in the music created by jungle producers',
   image: open_asset('apparel3.jpg'),
   quantity: 8,
-  price: 1_225.00
+  price: 25.00
 })
 
 cat1.products.create!({
@@ -88,7 +88,7 @@ cat3.products.create!({
   description: 'Metalheadz is a drum and bass record label based in the United Kingdom. Founded in 1994 by Kemistry & Storm and Goldie. Goldie\'s early experiences of the rave scene, especially the club Rage had a profound effect on him. DJ Kemistry introduced him to 4hero\'s Reinforced Records where he went on to create some design and artwork for them, leading to doing A&R for the label. ',
   image: open_asset('swag3.jpg'),
   quantity: 2,
-  price: 987.65
+  price: 45.65
 })
 
 cat1.products.create!({
