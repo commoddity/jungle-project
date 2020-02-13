@@ -5,9 +5,11 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 Added features:
 
 - Admin namespaced dashboard allowing for creation and destruction of products, categories and sales from within the application
-  -Secure authenticated login for users
-- Emailed order receipts when user logged in
+- Secure authenticated login for users
+- Added dynamically displayed sale info to layout
 - Rspec automated testing
+- Emailed order receipts when user logged in _(Stretch)_
+
 - Altered database seeds to be [absolutely massive](https://www.youtube.com/watch?v=AlZpSd2lRJQ).
 
 # Stack:
@@ -35,7 +37,9 @@ Added features:
 
 ![Order Placed](https://github.com/Commoddity/jungle-project/blob/master/docs/junglist3.png)
 
-_### Emailed Receipt (Stretch)_
+### Emailed Receipt
+
+_(Stretch)_
 
 ![Emailed Receipt Placed](https://github.com/Commoddity/jungle-project/blob/master/docs/junglist4.png)
 
@@ -61,3 +65,5 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 - PostgreSQL 9.x
 - Stripe
+- Rspec
+- Capybara
